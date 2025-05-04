@@ -1,0 +1,169 @@
+/* Paper format wrapper */
+.paper-format-wrapper {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Paper format container */
+.paper-format-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 60px;
+    background: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: 'Georgia', serif;
+    line-height: 1.6;
+    color: #333;
+    position: relative;
+    border-radius: 2px;
+    box-sizing: border-box;
+}
+
+/* Reset all content alignment */
+.paper-format-container * {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    box-sizing: border-box !important;
+    float: none !important;
+    position: static !important;
+}
+
+/* Main content styling */
+.paper-format-container h1 {
+    font-size: 32px;
+    margin-bottom: 24px !important;
+    line-height: 1.2;
+    text-align: left;
+    max-width: 100% !important;
+}
+
+.paper-format-container h2 {
+    font-size: 24px;
+    margin: 32px 0 16px !important;
+    text-align: left;
+    max-width: 100% !important;
+}
+
+.paper-format-container p {
+    margin-bottom: 16px !important;
+    font-size: 18px;
+    text-align: left;
+    max-width: 100% !important;
+    word-wrap: break-word;
+    white-space: normal;
+}
+
+.paper-format-container img {
+    max-width: 100% !important;
+    height: auto !important;
+    margin: 24px 0 !important;
+    display: block;
+}
+
+/* Fix for NYT specific elements */
+.paper-format-container [class*="StoryBodyCompanionColumn"] {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: auto !important;
+    max-width: none !important;
+}
+
+.paper-format-container [class*="StoryBodyCompanionColumn"] > * {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    width: auto !important;
+    max-width: none !important;
+}
+
+/* Fix for text containers */
+.paper-format-container div,
+.paper-format-container section,
+.paper-format-container article {
+    width: auto !important;
+    max-width: none !important;
+}
+
+/* Ad container styling */
+.paper-format-ad-container {
+    width: 300px;
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 20px;
+    background: #f8f8f8;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    box-sizing: border-box;
+}
+
+/* Responsive design */
+@media (max-width: 1200px) {
+    .paper-format-container {
+        margin: 20px auto;
+        padding: 40px;
+        width: 95%;
+    }
+    
+    .paper-format-ad-container {
+        position: static;
+        width: 95%;
+        max-width: 800px;
+        margin: 20px auto;
+        max-height: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .paper-format-container {
+        margin: 10px auto;
+        padding: 20px;
+        width: 95%;
+    }
+    
+    .paper-format-container h1 {
+        font-size: 28px;
+    }
+    
+    .paper-format-container p {
+        font-size: 16px;
+    }
+}
+
+/* Print styles */
+@media print {
+    .paper-format-container {
+        box-shadow: none;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .paper-format-ad-container {
+        display: none;
+    }
+}
+
+/* Fix for NYT and similar sites */
+body {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+} 

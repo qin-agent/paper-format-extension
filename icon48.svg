@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+    <!-- Paper background -->
+    <rect x="8" y="4" width="32" height="40" fill="#ffffff" stroke="#2196F3" stroke-width="2" rx="2"/>
+    <!-- Text lines -->
+    <rect x="12" y="12" width="24" height="2" fill="#2196F3" rx="1"/>
+    <rect x="12" y="18" width="20" height="2" fill="#2196F3" rx="1"/>
+    <rect x="12" y="24" width="24" height="2" fill="#2196F3" rx="1"/>
+    <rect x="12" y="30" width="16" height="2" fill="#2196F3" rx="1"/>
+    <!-- Shadow effect -->
+    <path d="M40 6v38c0 1.1-.9 2-2 2H10" fill="none" stroke="#BBDEFB" stroke-width="2"/>
+</svg> 
